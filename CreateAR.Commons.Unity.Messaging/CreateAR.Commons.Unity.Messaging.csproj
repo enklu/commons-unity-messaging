@@ -4,14 +4,14 @@
     <TargetFramework>net35</TargetFramework>
     <AssemblyName>CreateAR.Commons.Unity.Messaging</AssemblyName>
     <RootNamespace>CreateAR.Commons.Unity.Messaging</RootNamespace>
-    <AssemblyVersion>0.1.0</AssemblyVersion>
-    <Version>0.1.0</Version>
+    <AssemblyVersion>0.1.1</AssemblyVersion>
+    <Version>0.1.1</Version>
     <Description>For internal pub/sub.</Description>
     <Copyright>Copyright © 2017 CreateAR</Copyright>
     <Authors>CreateAR</Authors>
     <IncludeSymbols>True</IncludeSymbols>
-    <PackageReleaseNotes>Moved out of spireplayer.</PackageReleaseNotes>
-    <FileVersion>0.1.0</FileVersion>
+    <PackageReleaseNotes>Added shorthand for sending void events.</PackageReleaseNotes>
+    <FileVersion>0.1.1</FileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>full</DebugType>

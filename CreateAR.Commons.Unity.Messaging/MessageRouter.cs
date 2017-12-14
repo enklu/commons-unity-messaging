@@ -19,11 +19,7 @@ namespace CreateAR.Commons.Unity.Messaging
         /// </summary>
         private readonly List<MessageSubscriberGroup> _groups = new List<MessageSubscriberGroup>();
 
-        /// <summary>
-        /// Subscribes to a specific messageType.
-        /// </summary>
-        /// <param name="messageType">The messageType to subscribe to.</param>
-        /// <param name="subscriber">The subscriber to be called.</param>
+        /// <inheritdoc cref="IMessageRouter"/>
         public void Subscribe(
             int messageType,
             Action<object, Action> subscriber)
@@ -31,12 +27,7 @@ namespace CreateAR.Commons.Unity.Messaging
             Group(messageType).AddSubscriber(subscriber);
         }
 
-        /// <summary>
-        /// Subscribes to a specific messageType and returns a method to unsubscribe.
-        /// </summary>
-        /// <param name="messageType">The messageType to subscribe to.</param>
-        /// <param name="subscriber">The subscriber to call.</param>
-        /// <returns></returns>
+        /// <inheritdoc cref="IMessageRouter"/>
         public Action Subscribe(
             int messageType,
             Action<object> subscriber)
@@ -45,12 +36,7 @@ namespace CreateAR.Commons.Unity.Messaging
                 .AddSubscriber((message, unsub) => subscriber(message));
         }
 
-        /// <summary>
-        /// Subscribes to a specific messageType once and only once. When the
-        /// first message is received, the subscriber is immediately unsubscribed.
-        /// </summary>
-        /// <param name="messageType">The messageType to subscribe to.</param>
-        /// <param name="subscriber">The subscriber to call.</param>
+        /// <inheritdoc cref="IMessageRouter"/>
         public void SubscribeOnce(
             int messageType,
             Action<object, Action> subscriber)
@@ -58,13 +44,7 @@ namespace CreateAR.Commons.Unity.Messaging
             Group(messageType).AddSubscriber(subscriber, true);
         }
 
-        /// <summary>
-        /// Subscribes to a specific messageType once and only once and returns
-        /// a method to unsubscribe. When the first message is received, the
-        /// subscriber is immediately unsubscribed.
-        /// </summary>
-        /// <param name="messageType">The messageType to subscribe to.</param>
-        /// <param name="subscriber">The subscriber to call.</param>
+        /// <inheritdoc cref="IMessageRouter"/>
         public Action SubscribeOnce(
             int messageType,
             Action<object> subscriber)
@@ -73,29 +53,19 @@ namespace CreateAR.Commons.Unity.Messaging
                 .AddSubscriber((message, unsub) => subscriber(message), true);
         }
 
-        /// <summary>
-        /// Subscribes to all message types.
-        /// </summary>
-        /// <param name="subscriber">The subscriber to call.</param>
+        /// <inheritdoc cref="IMessageRouter"/>
         public void SubscribeAll(Action<object, Action> subscriber)
         {
             _all.AddSubscriber(subscriber);
         }
 
-        /// <summary>
-        /// Subscribes to all message types and returns a method for unsubscribing.
-        /// </summary>
-        /// <param name="subscriber">The subscriber to call.</param>
+        /// <inheritdoc cref="IMessageRouter"/>
         public Action SubscribeAll(Action<object> subscriber)
         {
             return _all.AddSubscriber((message, unsub) => subscriber(message));
         }
 
-        /// <summary>
-        /// Publishes a method that will call subscribers of this message type.
-        /// </summary>
-        /// <param name="messageType">The message type to publish to.</param>
-        /// <param name="message">The message to publish.</param>
+        /// <inheritdoc cref="IMessageRouter"/>
         public void Publish(
             int messageType,
             object message)
@@ -123,10 +93,13 @@ namespace CreateAR.Commons.Unity.Messaging
             }
         }
 
-        /// <summary>
-        /// Consumes a message, preventing further subscriptions to be called.
-        /// </summary>
-        /// <param name="message">The message to consume.</param>
+        /// <inheritdoc cref="IMessageRouter"/>
+        public void Publish(int messageType)
+        {
+            Publish(messageType, Async.Void.Instance);
+        }
+
+        /// <inheritdoc cref="IMessageRouter"/>
         public void Consume(object message)
         {
             for (int i = 0, len = _groups.Count; i < len; i++)

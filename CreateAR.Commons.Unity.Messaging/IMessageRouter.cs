@@ -60,13 +60,20 @@ namespace CreateAR.Commons.Unity.Messaging
         Action SubscribeAll(Action<object> subscriber);
 
         /// <summary>
-        /// Publishes a method that will call subscribers of this message type.
+        /// Publishes a message that will call subscribers of this message type.
         /// </summary>
         /// <param name="messageType">The message type to publish to.</param>
         /// <param name="message">The message to publish.</param>
         void Publish(
             int messageType,
             object message);
+
+        /// <summary>
+        /// Publishes a Void message that will call subscribers of this message
+        /// type.
+        /// </summary>
+        /// <param name="messageType">The message type to publish to.</param>
+        void Publish(int messageType);
 
         /// <summary>
         /// Consumes a message, preventing further subscriptions to be called.

@@ -392,6 +392,25 @@ namespace CreateAR.Commons.Unity.Messaging
         }
 
         [Test]
+        public void PublishVoid()
+        {
+            var called = false;
+
+            _router.Subscribe(
+                MESSAGE_TYPE_A,
+                (received, unsub) =>
+                {
+                    called = true;
+
+                    Assert.AreSame(Async.Void.Instance, received);
+                });
+
+            _router.Publish(MESSAGE_TYPE_A);
+
+            Assert.IsTrue(called);
+        }
+
+        [Test]
         public void Consume()
         {
             var called = 0;
