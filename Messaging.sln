@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateAR.Commons.Unity.Messaging", "CreateAR.Commons.Unity.Messaging\CreateAR.Commons.Unity.Messaging.csproj", "{9490A91F-AED0-467E-A40E-D73E861DBB1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enklu.Commons.Unity.Messaging", "Enklu.Commons.Unity.Messaging\Enklu.Commons.Unity.Messaging.csproj", "{9490A91F-AED0-467E-A40E-D73E861DBB1C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateAR.Commons.Unity.Messaging.Test", "CreateAR.Commons.Unity.Messaging.Test\CreateAR.Commons.Unity.Messaging.Test.csproj", "{3616C19B-CA4D-4E40-8A37-666B08F84DDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enklu.Commons.Unity.Messaging.Test", "Enklu.Commons.Unity.Messaging.Test\Enklu.Commons.Unity.Messaging.Test.csproj", "{3616C19B-CA4D-4E40-8A37-666B08F84DDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CreateAR.Commons.Unity.Messaging
+namespace Enklu.Commons.Unity.Messaging
 {
     /// <summary>
     /// Interface for sending and receiving messages.

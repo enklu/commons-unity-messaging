@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net45</TargetFramework>
+    <AssemblyName>Enklu.Commons.Unity.Messaging</AssemblyName>
+    <RootNamespace>Enklu.Commons.Unity.Messaging</RootNamespace>
+    <AssemblyVersion>2020.8.0</AssemblyVersion>
+    <Version>0.1.1</Version>
+    <Description></Description>
+    <Copyright></Copyright>
+    <Authors></Authors>
+    <IncludeSymbols>True</IncludeSymbols>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <FileVersion>2020.8.0</FileVersion>
+    <IsPackable>false</IsPackable>
+    <PackageId />
+    <PackageVersion />
+    <Company>Enklu</Company>
+    <Product>Enklu.Commons.Unity.Messaging</Product>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>True</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CreateAR.Commons.Unity.Async, Version=0.7.3.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\enkluplayer\Runtime\Plugins\CreateAR\Commons\CreateAR.Commons.Unity.Async.dll</HintPath>
+    </Reference>
+    
+    <Reference Include="Enklu.Commons.Unity.Logging, Version=2020.8.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\commons-unity-logging\Enklu.Commons.Unity.Logging\bin\Release\net35\Enklu.Commons.Unity.Logging.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
