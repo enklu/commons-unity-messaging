@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFrameworks>net35</TargetFrameworks>
     <RootNamespace>CreateAR.Commons.Unity.Messaging</RootNamespace>
-    <AssemblyName>CreateAR.Commons.Unity.Messaging.Test</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,7 +11,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CreateAR.Commons.Unity.Messaging\CreateAR.Commons.Unity.Messaging.csproj" />
+    <Reference Include="CreateAR.Commons.Unity.Async, Version=0.7.3.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\commons-unity-async\CreateAR.Commons.Unity.Async\bin\Debug\net45\CreateAR.Commons.Unity.Async.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Enklu.Commons.Unity.Messaging\Enklu.Commons.Unity.Messaging.csproj" />
   </ItemGroup>
 
 </Project>

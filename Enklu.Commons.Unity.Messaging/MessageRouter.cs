@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using CreateAR.Commons.Unity.Logging;
+using Enklu.Commons.Unity.Logging;
 
-namespace CreateAR.Commons.Unity.Messaging
+namespace Enklu.Commons.Unity.Messaging
 {
     /// <summary>
     /// Extra-safe message dispatch system.
@@ -96,9 +96,10 @@ namespace CreateAR.Commons.Unity.Messaging
         /// <inheritdoc cref="IMessageRouter"/>
         public void Publish(int messageType)
         {
-            Publish(messageType, Async.Void.Instance);
+            Publish(messageType, CreateAR.Commons.Unity.Async.Void.Instance);
         }
 
+        
         /// <inheritdoc cref="IMessageRouter"/>
         public void Consume(object message)
         {

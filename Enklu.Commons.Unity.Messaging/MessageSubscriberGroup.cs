@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using CreateAR.Commons.Unity.Async;
+using AggregateException = CreateAR.Commons.Unity.Async.AggregateException;
 
-namespace CreateAR.Commons.Unity.Messaging
+namespace Enklu.Commons.Unity.Messaging
 {
     /// <summary>
     /// Represents a group of subscribers all subscribed to the same message
